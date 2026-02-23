@@ -3,7 +3,6 @@ package com.apps.quantitymeasurement;
 public class Length 
 {
 
-
 	    private final double value;
 	    private final LengthUnit unit;
 
