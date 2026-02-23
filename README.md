@@ -116,10 +116,4 @@ UC7 demonstrates:
 * Clean extension without breaking previous UCs
 * Strong validation discipline
 * Unit-independent arithmetic operations
-
----
-
-## Branch Link
-
-[https://github.com/Shifa-Khan-05/QuantityMeasurementApp/tree/feature/UC7-AdditionWithTargetUnit](https://github.com/Suhani-Pawar24/QuantityMeasurementApp/tree/feature/UC7-Addition-With-Target-Unit-Specification)
 ---
