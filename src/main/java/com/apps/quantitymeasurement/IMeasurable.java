@@ -1,13 +1,12 @@
 package com.apps.quantitymeasurement;
 
-public interface IMeasurable 
-{
+public interface IMeasurable {
 
-	    double getConversionFactor();
+    double getConversionFactor();
 
-	    double convertToBaseUnit(double value);
+    double convertToBaseUnit(double value);
 
-	    double convertFromBaseUnit(double baseValue);
+    double convertFromBaseUnit(double baseValue);
 
-	    String getUnitName();
+    String getUnitName();
 }
