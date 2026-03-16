@@ -1,31 +1,24 @@
 package com.apps.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 public class QuantityMeasurementEntity {
 
     private String operation;
-    private String input1;
-    private String input2;
+    private String operand1;
+    private String operand2;
     private String result;
-    private String timestamp;
+    private String errorMessage;
 
-    // No-argument constructor
     public QuantityMeasurementEntity() {
     }
 
-    // Parameterized constructor
-    public QuantityMeasurementEntity(String operation, String input1, String input2, String result, String timestamp) {
+    public QuantityMeasurementEntity(String operation, String operand1, String operand2, String result, String errorMessage) {
         this.operation = operation;
-        this.input1 = input1;
-        this.input2 = input2;
+        this.operand1 = operand1;
+        this.operand2 = operand2;
         this.result = result;
-        this.timestamp = timestamp;
+        this.errorMessage = errorMessage;
     }
 
-    // Getter and Setter for operation
     public String getOperation() {
         return operation;
     }
@@ -34,25 +27,22 @@ public class QuantityMeasurementEntity {
         this.operation = operation;
     }
 
-    // Getter and Setter for input1
-    public String getInput1() {
-        return input1;
+    public String getOperand1() {
+        return operand1;
     }
 
-    public void setInput1(String input1) {
-        this.input1 = input1;
+    public void setOperand1(String operand1) {
+        this.operand1 = operand1;
     }
 
-    // Getter and Setter for input2
-    public String getInput2() {
-        return input2;
+    public String getOperand2() {
+        return operand2;
     }
 
-    public void setInput2(String input2) {
-        this.input2 = input2;
+    public void setOperand2(String operand2) {
+        this.operand2 = operand2;
     }
 
-    // Getter and Setter for result
     public String getResult() {
         return result;
     }
@@ -61,23 +51,22 @@ public class QuantityMeasurementEntity {
         this.result = result;
     }
 
-    // Getter and Setter for timestamp
-    public String getTimestamp() {
-        return timestamp;
+    public String getErrorMessage() {
+        return errorMessage;
     }
 
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 
     @Override
     public String toString() {
         return "QuantityMeasurementEntity{" +
                 "operation='" + operation + '\'' +
-                ", input1='" + input1 + '\'' +
-                ", input2='" + input2 + '\'' +
+                ", operand1='" + operand1 + '\'' +
+                ", operand2='" + operand2 + '\'' +
                 ", result='" + result + '\'' +
-                ", timestamp='" + timestamp + '\'' +
+                ", errorMessage='" + errorMessage + '\'' +
                 '}';
     }
 }

@@ -3,7 +3,6 @@ package com.apps.controller;
 import com.apps.dto.QuantityDTO;
 import com.apps.service.IQuantityMeasurementService;
 
-
 public class QuantityMeasurementController {
 
     private final IQuantityMeasurementService service;
@@ -22,7 +21,4 @@ public class QuantityMeasurementController {
         System.out.println("Addition Result: " + result);
     }
 
-	public IQuantityMeasurementService getService() {
-		return service;
-	}
 }

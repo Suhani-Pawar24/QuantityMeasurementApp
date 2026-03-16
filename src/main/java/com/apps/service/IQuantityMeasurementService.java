@@ -12,7 +12,6 @@ public interface IQuantityMeasurementService {
 
     QuantityDTO subtract(QuantityDTO q1, QuantityDTO q2);
 
-    
     double divide(QuantityDTO q1, QuantityDTO q2);
 
 }
