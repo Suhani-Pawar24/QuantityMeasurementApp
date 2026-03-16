@@ -2,11 +2,11 @@ package com.example;
 
 import org.junit.jupiter.api.Test;
 
-import com.apps.quantitymeasurement.LengthUnit;
-import com.apps.quantitymeasurement.Quantity;
-import com.apps.quantitymeasurement.TemperatureUnit;
-import com.apps.quantitymeasurement.VolumeUnit;
-import com.apps.quantitymeasurement.WeightUnit;
+import com.apps.core.LengthUnit;
+import com.apps.core.Quantity;
+import com.apps.core.TemperatureUnit;
+import com.apps.core.VolumeUnit;
+import com.apps.core.WeightUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -35,4 +35,42 @@ target/
 
 # Ignore OS files
 .DS_Store
+Thumbs.
+/.metadata/
+.gitignore
+############################
+# Java / Maven
+############################
+target/
+*.class
+*.jar
+*.log
+
+############################
+# Eclipse / STS (VERY IMPORTANT)
+############################
+.metadata/
+.project
+.classpath
+.settings/
+
+############################
+# IntelliJ / VS Code
+############################
+.idea/
+.vscode/
+*.iml
+
+############################
+# OS Files
+############################
+.DS_Store
 Thumbs.db
+
+############################
+# Build folders
+############################
+bin/
+out/
+build/
+dist/
