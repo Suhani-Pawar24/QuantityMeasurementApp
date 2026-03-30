@@ -1,5 +1,7 @@
 package com.app.controller;
 
+import com.app.service.IQuantityMeasurementService;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -7,20 +9,18 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.app.quantitymeasurement.quantitymeasurement.quantitymeasurement.service.IQuantityMeasurementService;
-
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(QuantityMeasurementController.class)
-class QuantityMeasurementControllerTest {
+public class QuantityMeasurementControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private com.app.service.IQuantityMeasurementService service;
+    private IQuantityMeasurementService service;
 
     // ================= COMPARE =================
 
@@ -121,4 +121,5 @@ class QuantityMeasurementControllerTest {
                 .content(json))
                 .andExpect(status().isOk());
     }
+
 }
