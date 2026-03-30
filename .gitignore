@@ -75,3 +75,5 @@ HELP.md
 *.jar
 *.war
 .gitattributes
+.metadata/
+src/main/resources/application-secrets.properties
