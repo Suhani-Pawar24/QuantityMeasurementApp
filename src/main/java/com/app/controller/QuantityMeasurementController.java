@@ -5,14 +5,21 @@ import org.springframework.web.bind.annotation.*;
 
 import com.app.dto.QuantityDTO;
 import com.app.dto.QuantityInputDTO;
+import com.app.model.QuantityMeasurementEntity;
+import com.app.repository.QuantityMeasurementRepository;
 import com.app.service.IQuantityMeasurementService;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/quantities")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class QuantityMeasurementController {
 
     @Autowired
     private IQuantityMeasurementService service;
+    
+    @Autowired
+    private QuantityMeasurementRepository repository;
 
     // ================= COMPARE =================
 
@@ -66,5 +73,17 @@ public class QuantityMeasurementController {
                 input.getThisQuantityDTO(),
                 input.getThatQuantityDTO()
         );
+    }
+
+    // ================= HISTORY =================
+
+    @GetMapping("/history")
+    public List<QuantityMeasurementEntity> getHistory() {
+        return repository.findAll();
+    }
+
+    @GetMapping("/history/{operation}")
+    public List<QuantityMeasurementEntity> getHistoryByOperation(@PathVariable String operation) {
+        return repository.findByOperation(operation);
     }
 }
